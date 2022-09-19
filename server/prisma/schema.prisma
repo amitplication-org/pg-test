@@ -8,12 +8,12 @@ generator client {
 }
 
 model User {
-  id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   firstName String?
   lastName  String?
   username  String   @unique
+  id        String   @id @default(cuid())
   password  String
   roles     Json
 }
@@ -32,13 +32,13 @@ model Order {
 }
 
 model Customer {
+  phone     String?
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   firstName String?
   lastName  String?
   email     String?
-  phone     String?
   orders    Order[]
   address   Address? @relation(fields: [addressId], references: [id])
   addressId String?

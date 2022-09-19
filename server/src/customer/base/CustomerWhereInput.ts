@@ -11,14 +11,25 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { StringFilter } from "../../util/StringFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { StringFilter } from "../../util/StringFilter";
 import { OrderListRelationFilter } from "../../order/base/OrderListRelationFilter";
 import { AddressWhereUniqueInput } from "../../address/base/AddressWhereUniqueInput";
 @InputType()
 class CustomerWhereInput {
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  phone?: StringNullableFilter;
+
   @ApiProperty({
     required: false,
     type: StringFilter,
@@ -62,17 +73,6 @@ class CustomerWhereInput {
     nullable: true,
   })
   email?: StringNullableFilter;
-
-  @ApiProperty({
-    required: false,
-    type: StringNullableFilter,
-  })
-  @Type(() => StringNullableFilter)
-  @IsOptional()
-  @Field(() => StringNullableFilter, {
-    nullable: true,
-  })
-  phone?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

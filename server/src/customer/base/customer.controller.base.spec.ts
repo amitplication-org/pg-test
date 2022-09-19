@@ -11,42 +11,42 @@ import { CustomerService } from "../customer.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  phone: "examplePhone",
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
   firstName: "exampleFirstName",
   lastName: "exampleLastName",
   email: "exampleEmail",
-  phone: "examplePhone",
 };
 const CREATE_RESULT = {
+  phone: "examplePhone",
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
   firstName: "exampleFirstName",
   lastName: "exampleLastName",
   email: "exampleEmail",
-  phone: "examplePhone",
 };
 const FIND_MANY_RESULT = [
   {
+    phone: "examplePhone",
     id: "exampleId",
     createdAt: new Date(),
     updatedAt: new Date(),
     firstName: "exampleFirstName",
     lastName: "exampleLastName",
     email: "exampleEmail",
-    phone: "examplePhone",
   },
 ];
 const FIND_ONE_RESULT = {
+  phone: "examplePhone",
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
   firstName: "exampleFirstName",
   lastName: "exampleLastName",
   email: "exampleEmail",
-  phone: "examplePhone",
 };
 
 const service = {
