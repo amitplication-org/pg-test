@@ -59,13 +59,13 @@ export class CustomerControllerBase {
           : undefined,
       },
       select: {
+        phone: true,
         id: true,
         createdAt: true,
         updatedAt: true,
         firstName: true,
         lastName: true,
         email: true,
-        phone: true,
 
         address: {
           select: {
@@ -91,13 +91,13 @@ export class CustomerControllerBase {
     return this.service.findMany({
       ...args,
       select: {
+        phone: true,
         id: true,
         createdAt: true,
         updatedAt: true,
         firstName: true,
         lastName: true,
         email: true,
-        phone: true,
 
         address: {
           select: {
@@ -124,13 +124,13 @@ export class CustomerControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
+        phone: true,
         id: true,
         createdAt: true,
         updatedAt: true,
         firstName: true,
         lastName: true,
         email: true,
-        phone: true,
 
         address: {
           select: {
@@ -174,13 +174,13 @@ export class CustomerControllerBase {
             : undefined,
         },
         select: {
+          phone: true,
           id: true,
           createdAt: true,
           updatedAt: true,
           firstName: true,
           lastName: true,
           email: true,
-          phone: true,
 
           address: {
             select: {
@@ -215,13 +215,13 @@ export class CustomerControllerBase {
       return await this.service.delete({
         where: params,
         select: {
+          phone: true,
           id: true,
           createdAt: true,
           updatedAt: true,
           firstName: true,
           lastName: true,
           email: true,
-          phone: true,
 
           address: {
             select: {
